@@ -206,6 +206,7 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+.gradle/
 
 ### OSX ###
 # General
