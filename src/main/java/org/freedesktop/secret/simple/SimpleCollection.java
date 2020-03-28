@@ -217,6 +217,15 @@ public final class SimpleCollection implements AutoCloseable {
     @Override
     public void close() {
         clear();
+        if (encryption != null) {
+            encryption.close();
+        }
+        if (encrypted != null) {
+            encrypted.close();
+        }
+        if (session != null) {
+            session.close();
+        }
     }
 
     /**
