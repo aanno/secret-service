@@ -339,6 +339,9 @@ public final class SimpleCollection extends org.freedesktop.secret.simple.interf
     @Override
     public void close() {
         clear();
+        if (encrypted != null) {
+            encrypted.close();
+        }
         log.debug("Cleared secrets properly.");
         if (session != null) {
             session.close();
